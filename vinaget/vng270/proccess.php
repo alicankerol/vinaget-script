@@ -12,7 +12,7 @@ $obj = new stream_get();
 $page = !empty($_GET['page']) ? $_GET['page'] : '';
 
 if ($obj->Deny || !$obj->isadmin() || empty($page)) {
-	setcookie('msg', 'proccess.php :: Access Violation');
+	setcookie('msg', 'process.php :: Access Violation');
 	header('Location: index.php');
 	ob_end_flush();
 	exit;
@@ -79,7 +79,7 @@ switch ($page) {
 		break;
 
 	default:
-		setcookie('msg', 'proccess.php :: Unknown Page Type');
+		setcookie('msg', 'process.php :: Unknown Page Type');
 		header('Location: index.php');
 		ob_end_flush();
 		exit;

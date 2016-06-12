@@ -49,7 +49,7 @@ $lang = array (
 'svload'		=> 'O load do servidor está muito alto!',
 'issex'			=> '<b><font color=red>É link porno ??? ==&#9658;</font> <a href=http://www.google.com/search?q=%1$s><font color=#00CC00>%1$s</font></a><br/><font color=#FFCC00>se não, por favor re-post %1$s|not3x</b><br/>',
 'errorlink'		=> '==&#9658; Link Inválido!',
-'manyjob'		=> 'Muitos downloads sendo feitos nesse momento.',
+'manyjob'		=> 'Muitos downloads sendo feitos nesse memento.',
 'countMBIP'		=> 'Você apenas pode fazer download %s por %s ! Por favor aguarde %s',
 'limitPERIP'	=> 'Você pode baixar %s arquivos por %s!Por favor aguarde %s',
 'limitip'		=> 'Muitos downloads sendo feitos por esse IP.',
