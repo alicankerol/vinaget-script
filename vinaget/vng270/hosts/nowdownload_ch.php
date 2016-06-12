@@ -17,7 +17,7 @@ class dl_nowdownload_ch extends Download {
     public function Leech($url) {
  		$data = $this->lib->curl($url, $this->lib->cookie, "");
 		if(stristr($data, 'This file does not exist!')) $this->error("dead", true, false);
-		elseif(stristr($data, 'The file is being transfered. Please wait!')) $this->error("The file is being transfered. Please wait!", true, false);
+		elseif(stristr($data, 'The file is being transferred. Please wait!')) $this->error("The file is being transferred. Please wait!", true, false);
 		elseif(preg_match('/><a href="(https?:\/\/.*)" class="btn btn-danger">Click here/i', $data, $redir)) return trim($redir[1]);
 		return false;
     }

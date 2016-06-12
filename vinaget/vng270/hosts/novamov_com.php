@@ -7,7 +7,7 @@ class dl_novamov_com extends Download {
 		$url = "http://www.novamov.com/video/{$fileID[2]}";
 		$data = $this->lib->curl($url, "", "");
 		$this->save($this->lib->GetCookies($data));
-		if(stristr($data, "This file no longer exists") || stristr($data, "The file is being transfered")) $this->error("dead", true, false, 2);
+		if(stristr($data, "This file no longer exists") || stristr($data, "The file is being transferred")) $this->error("dead", true, false, 2);
 		preg_match('@\.file="(\w+)"@i', $data, $fid); 
 		preg_match('@\.filekey="([^"]+)"@i', $data, $fkey);
 		$data = $this->lib->curl("http://www.novamov.com/api/player.api.php?user=undefined&codes=1&file={$fid[1]}&pass=undefined&key={$fkey[1]}", $this->lib->cookie, "");

@@ -7,7 +7,7 @@ echo '<h3><a href="?id=admin&page=config">Config</a> |
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'config';
 if($page == "debug") echo "<form method='POST' action='debug.php' target='debug'>";
-else echo "<form method='POST' action='proccess.php?page={$page}'>";
+else echo "<form method='POST' action='process.php?page={$page}'>";
 if($obj->msg) echo "<b>{$obj->msg}</b>";
 if($page == 'config'){
 	include ("config.php");
@@ -87,7 +87,7 @@ elseif($page == 'cookie'){
 			</tr>
 		';
 	foreach ($obj->cookies as $ckey=>$cookies){
-		if($cookies['cookie'] != "") echo '<tr class="flistmouseoff"><td><B>'.$ckey.'</B></td><td>'.$cookies['cookie'].'</td><td><a style="color: black;" href="proccess.php?page=cookie&del='.$ckey.'">[X]</a></td></tr>';
+		if($cookies['cookie'] != "") echo '<tr class="flistmouseoff"><td><B>'.$ckey.'</B></td><td>'.$cookies['cookie'].'</td><td><a style="color: black;" href="process.php?page=cookie&del='.$ckey.'">[X]</a></td></tr>';
 	}
 	echo "</table>";
 }
@@ -125,7 +125,7 @@ elseif($page == 'account'){
 		$max = count($val['accounts']);
 		if($max != 0){
 			for($i=0;$i<$max;$i++){
-				echo '<tr class="flistmouseoff"><td><B>'.$ckey.'</B></td><td>'.$val['accounts'][$i].'</td><td><a style="color: black;" href="proccess.php?page=account&del='.$i.'&host='.$ckey.'">Delete</a></td></tr>';
+				echo '<tr class="flistmouseoff"><td><B>'.$ckey.'</B></td><td>'.$val['accounts'][$i].'</td><td><a style="color: black;" href="process.php?page=account&del='.$i.'&host='.$ckey.'">Delete</a></td></tr>';
 			}
 		}
 	}

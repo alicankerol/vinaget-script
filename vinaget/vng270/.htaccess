@@ -47,7 +47,7 @@ allow from all
 allow from all
 </files>
 
-<files proccess.php>
+<files process.php>
 allow from all
 </files>
 
